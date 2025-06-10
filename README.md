@@ -23,6 +23,7 @@ Uploading and displaying of images
 Report generation
 
 
+
 ⚙️ Initial Configuration
 
 1. 🔐 application.properties File
@@ -68,5 +69,4 @@ Gradle
 Thymeleaf (if using views)
 
 Security (JWT or another mechanism)
-
 

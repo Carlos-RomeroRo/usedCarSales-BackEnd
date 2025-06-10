@@ -1,0 +1,8 @@
+spring.application.name=usedCarSales
+
+#configuración de la base de datos
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+spring.datasource.db=
+spring.jpa.hibernate.ddl-auto=
