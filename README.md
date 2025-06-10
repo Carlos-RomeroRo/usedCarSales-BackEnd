@@ -22,24 +22,6 @@ Uploading and displaying of images
 
 Report generation
 
-📂 Project Structure
-
-usedCarSales/
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/usedCarSales
-│   │   │   ├── entity/
-│   │   │   ├── repository/
-│   │   │   └── UsedCarSalesApplication.java
-│   │   └── resources/
-│   │       ├── static/
-│   │       ├── templates/
-│   │       ├── application.properties ← ⚠️ YOU MUST CREATE THIS
-│   │       └── application.properties.txt ← 📄 CONFIGURATION EXAMPLE
-├── docker-compose.yml ← ⚠️ YOU MUST CREATE THIS
-├── docker-compose.yml.txt ← 📄 CONFIGURATION EXAMPLE
-├── build.gradle
-└── .gitignore
 
 ⚙️ Initial Configuration
 
