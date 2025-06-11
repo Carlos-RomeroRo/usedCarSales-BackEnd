@@ -28,11 +28,11 @@ public class ShoppingCartCars {
     private Long idShoppingCartCar;
 
     @ManyToOne
-    @JoinColumn(name = "shopping_cart_id",  referencedColumnName = "id_shopping_cart")
+    @JoinColumn(name = "shoppingCartId",  referencedColumnName = "idShoppingCart")
     private ShoppingCart shoppingCart;
 
     @ManyToOne
-    @JoinColumn(name = "car_id",  referencedColumnName = "id_car")
+    @JoinColumn(name = "carId",  referencedColumnName = "idCar")
     private Car car;
 
     // Optional
