@@ -25,7 +25,7 @@ import jakarta.persistence.GeneratedValue;
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_role;
+    private Long idRole;
     
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

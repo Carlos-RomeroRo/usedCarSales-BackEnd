@@ -13,27 +13,27 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_user;
+    private Long idUser;
 
     @Column(nullable = false)
-    private String name_user;
+    private String name;
 
     @Column(nullable = false)
-    private String email_user;
+    private String email;
 
     @Column(nullable = false)
-    private String password_user;
+    private String password;
     
     
         @ManyToOne
-        @JoinColumn(name = "id_role")
-        private Role role_user;
+        @JoinColumn(name = "idRole")
+        private Role roleUser;
     
     @OneToMany (mappedBy = "user", cascade = CascadeType.ALL)
     private List<Order> orders;
 
     @OneToMany (mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Car> Cars;
+    private List<Car> cars;
 
     @OneToOne (mappedBy = "user")
     private ShoppingCart shoppingCart;

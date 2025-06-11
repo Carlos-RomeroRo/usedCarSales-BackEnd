@@ -25,7 +25,7 @@ public class ShoppingCartCars {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_shopping_cart_car;
+    private Long idShoppingCartCar;
 
     @ManyToOne
     @JoinColumn(name = "shopping_cart_id",  referencedColumnName = "id_shopping_cart")

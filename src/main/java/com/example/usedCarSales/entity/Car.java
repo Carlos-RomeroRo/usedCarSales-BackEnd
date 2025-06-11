@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_car;
+    private Long idCar;
 
     @Column(nullable = false)
     private String brand;
@@ -44,7 +44,7 @@ public class Car {
 
     //relation with user
     @ManyToOne
-    @JoinColumn(name = "user_id",  referencedColumnName = "id_user")
+    @JoinColumn(name = "userId",  referencedColumnName = "idUser")
     private User user;
 
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)

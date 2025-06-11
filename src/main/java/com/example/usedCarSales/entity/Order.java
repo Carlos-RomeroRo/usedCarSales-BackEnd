@@ -15,20 +15,20 @@ import java.time.LocalDate;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_order;
+    private Long idOrder;
 
     @Column(nullable = false)
-    private LocalDate date_order;
+    private LocalDate dateOrder;
 
     @Column(nullable = false)
-    private BigDecimal total_price;
+    private BigDecimal totalPrice;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userId")
     private User user;
  
     @ManyToOne
-    @JoinColumn(name = "car_id",  referencedColumnName = "id_car")
+    @JoinColumn(name = "carId",  referencedColumnName = "idCar")
     private Car car;
 
     @OneToOne(mappedBy = "order")

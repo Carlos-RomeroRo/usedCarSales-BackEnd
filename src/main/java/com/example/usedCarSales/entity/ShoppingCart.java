@@ -23,10 +23,10 @@ import lombok.NoArgsConstructor;
 public class ShoppingCart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_shopping_cart;
+    private Long idShoppingCart;
 
     @OneToOne
-    @JoinColumn(name = "user_id",  referencedColumnName = "id_user")
+    @JoinColumn(name = "userId",  referencedColumnName = "idUser")
     private User user;
 
     @OneToMany (mappedBy = "shoppingCart", cascade = CascadeType.ALL)

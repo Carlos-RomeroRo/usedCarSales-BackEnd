@@ -30,24 +30,24 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(nullable = false)
-    private Long id_payment;
+    private Long idPayment;
 
     @Column(nullable = false)
-    private LocalDate date_payment;
+    private LocalDate datePayment;
 
     @Column(nullable = false)
-    private BigDecimal amount_payment;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private PaymentMethodStatus payment_method;
+    private BigDecimal amountPayment;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private PaymentStatus payment_status;
+    private PaymentMethodStatus paymentMethod;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private PaymentStatus paymentStatus;
 
     @OneToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "orderId")
     private Order order;
 
 }
