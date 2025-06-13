@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 
 public record OrderDTO(
-    Long id, 
+    Long orderId, 
     LocalDate dateOrder,
     BigDecimal totalPrice,
     Long userId,

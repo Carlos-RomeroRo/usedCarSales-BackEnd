@@ -39,5 +39,4 @@ public class User {
     private ShoppingCart shoppingCart;
 
 
-
 }

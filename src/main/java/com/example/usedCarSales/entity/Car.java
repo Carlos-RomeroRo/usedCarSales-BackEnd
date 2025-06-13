@@ -42,12 +42,20 @@ public class Car {
     @Column(name = "status")
     private CarStatus status;
 
-    //relation with user
     @ManyToOne
     @JoinColumn(name = "userId",  referencedColumnName = "idUser")
     private User user;
 
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<ShoppingCartCars> shoppingCartCars;
+
+
+    public Long getIdCar() {
+        return idCar;
+    }
+
+    public User getUser() {
+        return user;
+    }
 
 }

@@ -1,7 +1,8 @@
 package com.example.usedCarSales.dto;
 
 public record ShoppingCartCarsDTO(
-    Long id,
+    Long shoppingCartCarId,
+    Long shoppingCartId,
     Long carId,
     int quantity
 ) {

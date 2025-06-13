@@ -4,13 +4,14 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import com.example.usedCarSales.entity.status.PaymentMethodStatus;
+import com.example.usedCarSales.entity.status.PaymentStatus;
 
 public record PaymentDTO(
-    Long idPayment,
+    Long paymentId,
     LocalDate datePayment,
     BigDecimal amountPayment,
-    PaymentDTO paymentMethod,
-    PaymentMethodStatus paymentStatus,
+    PaymentMethodStatus paymentMethod,
+    PaymentStatus paymentStatus,
     Long orderId
 ) {
     
