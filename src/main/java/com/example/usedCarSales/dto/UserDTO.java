@@ -9,6 +9,7 @@ public record UserDTO(
     String password,
     List<Long> ordersIds,
     List<Long> carsIds,
-    Long shoppingCartId
+    Long shoppingCartId,
+    Long roleId
 ) {
 }

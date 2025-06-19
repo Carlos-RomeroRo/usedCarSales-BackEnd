@@ -11,13 +11,6 @@ public interface RoleMapper {
     @Mapping(source = "idRole", target = "roleId")
     RoleDTO RoletoRoleDto(Role role);
 
-    default Role RoleDtoToRole(RoleDTO roleDTO) {
-        if (roleDTO == null) {
-            return null;
-        }
-        Role role = new Role();
-        role.setIdRole(roleDTO.roleId());
-        role.setName(roleDTO.name());
-        return role;
-    }
+    @Mapping(source = "roleId", target = "idRole")
+    Role RoleDtoToRole(RoleDTO roleDTO);
 }

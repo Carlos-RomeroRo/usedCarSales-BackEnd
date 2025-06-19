@@ -3,6 +3,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
 import java.util.List;
 @Data
 @AllArgsConstructor
@@ -30,10 +32,10 @@ public class User {
         private Role roleUser;
     
     @OneToMany (mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
 
     @OneToMany (mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Car> cars;
+    private List<Car> cars = new ArrayList<>();
 
     @OneToOne (mappedBy = "user")
     private ShoppingCart shoppingCart;

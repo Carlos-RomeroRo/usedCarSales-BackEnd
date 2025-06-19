@@ -13,12 +13,7 @@ public interface ShoppingCartMapper {
     @Mapping(source = "user.idUser", target = "userId")
     ShoppingCartDTO shoppingCartToShoppingCartDTO(ShoppingCart shoppingCart);
 
-    default ShoppingCart shoppingCartDTOToShoppingCart(ShoppingCartDTO shoppingCartDTO) {
-        if (shoppingCartDTO == null) {
-            return null;
-        }
-        ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setIdShoppingCart(shoppingCartDTO.shoppingCartId());
-        return shoppingCart;
-    }
+    @Mapping(source = "shoppingCartId", target = "idShoppingCart")
+    @Mapping(target = "user", ignore = true)
+    ShoppingCart shoppingCartDTOToShoppingCart(ShoppingCartDTO shoppingCartDTO);
 }

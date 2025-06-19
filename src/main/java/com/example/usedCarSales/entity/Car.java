@@ -1,7 +1,5 @@
 package com.example.usedCarSales.entity;
 import java.math.BigDecimal;
-import java.util.List;
-
 import com.example.usedCarSales.entity.status.CarStatus;
 
 import jakarta.persistence.*;
@@ -45,17 +43,5 @@ public class Car {
     @ManyToOne
     @JoinColumn(name = "userId",  referencedColumnName = "idUser")
     private User user;
-
-    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
-    private List<ShoppingCartCars> shoppingCartCars;
-
-
-    public Long getIdCar() {
-        return idCar;
-    }
-
-    public User getUser() {
-        return user;
-    }
 
 }

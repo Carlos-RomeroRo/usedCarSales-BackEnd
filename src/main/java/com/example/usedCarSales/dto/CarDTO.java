@@ -10,6 +10,7 @@ public record CarDTO(
      BigDecimal price,
      int mileage,
      String image,
-     Long userId
+     Long userId,
+     String status
 ) {   
 }
