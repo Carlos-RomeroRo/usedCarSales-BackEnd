@@ -20,6 +20,5 @@ public interface OrderMapper {
     @Mapping(target = "user", ignore = true)
     @Mapping(target = "car", ignore = true)
     @Mapping(target = "payment", ignore = true)
-    Order orderDtotoOrder(OrderDTO orderDTO);
-    
+    Order orderDTOtoOrder(OrderDTO orderDTO);
 }
