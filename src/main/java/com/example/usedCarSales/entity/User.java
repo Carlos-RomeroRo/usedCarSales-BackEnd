@@ -40,5 +40,4 @@ public class User {
     @OneToOne (mappedBy = "user")
     private ShoppingCart shoppingCart;
 
-
 }

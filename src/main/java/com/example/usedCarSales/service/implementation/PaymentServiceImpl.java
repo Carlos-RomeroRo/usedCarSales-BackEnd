@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.usedCarSales.dto.PaymentDTO;
 import com.example.usedCarSales.entity.Order;
@@ -75,6 +76,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
+    @Transactional
     public Boolean deletePayment(Long id) {
         try {
             if (!paymentRepository.existsById(id)) {
